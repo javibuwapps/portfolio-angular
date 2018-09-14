@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 // Routing
 import { AppRoutingModule } from './/app-routing.module';
@@ -13,6 +15,7 @@ import { PortafolioComponent } from './pages/portafolio/portafolio.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ItemComponent } from './pages/item/item.component';
 import { HomeComponent } from './pages/home/home.component';
+import { SearchComponent } from './pages/search/search.component';
 
 // Services
 
@@ -26,12 +29,14 @@ import { HomeComponent } from './pages/home/home.component';
     PortafolioComponent,
     AboutComponent,
     ItemComponent,
-    HomeComponent
+    HomeComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -33,9 +33,14 @@
           <li class="rk-menu__item"><a routerLink="contact" class="rk-menu__link">Contact Us</a>
           </li>
         </ul>
-        <form class="rk-search">
-          <input type="text" placeholder="Search" id="urku-search" class="rk-search-field">
-          <label for="urku-search">
+        <form class="rk-search" #searchForm="ngForm">
+          <input type="text" 
+                 (keyup.enter)="searchProduct(txtSearch.value)"
+                 placeholder="Search..." 
+                 id="txtSearch"  
+                 #txtSearch  
+                 class="rk-search-field">
+          <label for="txtSearch">
             <svg>
               <use xlink:href="assets/img/symbols.svg#icon-search"></use>
             </svg>

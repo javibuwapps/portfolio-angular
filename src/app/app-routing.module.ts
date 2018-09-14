@@ -6,6 +6,7 @@ import { PortafolioComponent } from './pages/portafolio/portafolio.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ItemComponent } from './pages/item/item.component';
 import { HomeComponent } from './pages/home/home.component';
+import { SearchComponent } from './pages/search/search.component';
 
 
 // app routes
@@ -23,8 +24,12 @@ const routes: Routes = [
       component: AboutComponent
   },
   {
-      path: 'item/:prod-id',
+      path: 'item/:id',
       component: ItemComponent
+  },
+  {
+    path: 'search/:term',
+    component: SearchComponent
   },
   {
       path: '**' ,
